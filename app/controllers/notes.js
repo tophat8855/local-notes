@@ -6,6 +6,16 @@ export default Ember.Controller.extend({
       var content = this.get('newNote');
       var note = this.store.createRecord('note', {content: content,});
       note.save();
-    }
+      this.set('newNote', '');
+    },
+    deleteNote: function(note) {
+      this.store.find('note', note.id).then(function(note) {
+        note.deleteRecord();
+        note.get('isDeleted');
+        note.save();
+
+        // OR post.destroyRecord();
+      });
+    },
   }
 });
