@@ -1,9 +1,13 @@
-{{textarea value=newNote placeholder="Type a note here"}}
+<div id="message">
+  {{message}}
+</div>
 
-<button {{action "createNote"}}>Save Note</button>
-<br>
+<div id="form-container">
+  {{textarea id='create' value=newNote placeholder="Type a note here"}}
+  <button {{action "createNote"}}>Save Note</button>
+</div>
 Your notes:
-<div id="list-notes">
+<div id="list-container">
   {{#each note in model}}
   <li>
     {{note.content}}
