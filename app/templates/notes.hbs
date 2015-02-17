@@ -1,0 +1,10 @@
+{{textarea value=newNote}}
+
+<button {{action "createNote"}}>Save Note</button>
+
+Your notes:
+<div id="list-notes">
+  {{#each note in model}}
+  {{note.content}}
+  {{/each}}
+</div>
