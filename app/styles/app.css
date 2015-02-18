@@ -1,4 +1,4 @@
-body {
+/*body {
   background: url('debut_light.png')
 }
 
@@ -45,7 +45,7 @@ form {
   text-align: center;
 }
 
-#create::-moz-placeholder {  /* Firefox 19+ */
+#create::-moz-placeholder {
   color: purple;
   text-align: center;
 }
@@ -55,7 +55,7 @@ form {
   text-align: center;
 }
 
-#create:focus::-moz-placeholder {  /* Firefox 19+ */
+#create:focus::-moz-placeholder {  
   color: transparent;
   text-align: center;
 }
@@ -105,4 +105,4 @@ form {
 
 #templates {
   display: none
-}
+}*/

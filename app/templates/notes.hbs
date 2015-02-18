@@ -3,14 +3,16 @@
 </div>
 
 <div id="form-container">
-  {{textarea id='createTitle' value=newTitle placeholder="Title"}}
-  {{textarea id='createBody' value= newBody placeholder="Type a note here"}}
+  <div class="form">
+    {{textarea id='createTitle' value=newTitle placeholder="Title"}}
+    {{textarea id='createBody' value= newBody placeholder="Type a note here"}}
+  </div>
   <button {{action "createNote"}}>Save Note</button>
 </div>
 Your notes:
 <div id="list-container">
   {{#each note in model}}
-  <p contentEditable>
+  <p contentEditable class="item">
     <h3>{{note.title}}</h3>
     <p>
       {{note.body}}
